@@ -9,8 +9,8 @@ class Consolidate_Information():
 
     
     def  run(self, lst_clients):
-        lst_clients.sort(key=attrgetter('uf'))
         # Agrupando pelo atributo 'UF'
+        lst_clients.sort(key=attrgetter('uf'))
         clients_grouped_by_uf = groupby(lst_clients, key=attrgetter('uf'))
 
         for uf, group in clients_grouped_by_uf:
